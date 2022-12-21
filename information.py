@@ -2,12 +2,23 @@ from flask import Flask, render_template, url_for, flash, redirect
 from flask_sqlalchemy import SQLAlchemy 
 from forms import RegistrationForm, LoginForm
 
+
+
 app =Flask(__name__)
+
+app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///project.db'
+
 app.config[
     "SECRET_KEY"
 ] = "62913a7dac3933f87a84626fcdeaaf9e2653f0a000843efd9bf2b31ba4767402"
-app.config ['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///is.db'
-db = SQLAlchemy(app)
+
+db=SQLAlchemy(app)
+app.app_context().push()
+
+
+#db.init_app(app)
+
+
 
 tv = [
     {
