@@ -7,15 +7,13 @@
       <h4>تسوق اسهل </h4>
     </div>
     <ul class="nav-items">
-      <li class="nav-item">
-        <a href="{{url_for('categories')}}" class="nav-link">الفئات</a>
-      </li>
-      <li class="nav-item">
-        <a href="basket.html" class="nav-link"> السلة </a>
-      </li>
-      <li class="nav-item">
-        <a href="{{url_for('home')}}" class="nav-link"> تسجيل خروج</a>
-      </li>
+      <ul class="nav-items">
+        <li class="nav-item">
+          <a href="{{url_for('categories')}}" class="nav-link">الفئات</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{url_for('home')}}" class="nav-link"> تسجيل خروج</a>
+        </li>
     </ul>
   </nav>
 
@@ -49,7 +47,7 @@
             إمكانية التحكم في خاصية النقع ( حتى 180 دقيقة ) من خلال مفتاح النقع 
             إمكانية تحديد مستوى المياه بالغسالة أوتوماتيكياً ليتناسب مع كمية الغسيل 
           </p>
-          <button class="btn"><a href="#features"> اضافه للسلة</a></button>
+          <div> <button class="btn"><a href="{{url_for('payment')}}">شراء</a></button></div>
         </div>
         <div class="hero-image">
           <img src="{{url_for('static', filename='image/wish sharp.png')}}" width="500" alt="washing-machine SHARP" />

@@ -7,15 +7,13 @@
       <h4>تسوق اسهل </h4>
     </div>
     <ul class="nav-items">
-      <li class="nav-item">
-        <a href="{{url_for('categories')}}" class="nav-link">الفئات</a>
-      </li>
-      <li class="nav-item">
-        <a href="basket.html" class="nav-link"> السلة </a>
-      </li>
-      <li class="nav-item">
-        <a href="{{url_for('home')}}" class="nav-link"> تسجيل خروج</a>
-      </li>
+      <ul class="nav-items">
+        <li class="nav-item">
+          <a href="{{url_for('categories')}}" class="nav-link">الفئات</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{url_for('home')}}" class="nav-link"> تسجيل خروج</a>
+        </li>
     </ul>
   </nav>
 
@@ -45,7 +43,7 @@
             تعمل 5000 ساعة تشغيل متواصلة
             جهد التشغيل : 220 فولت - 50 هرتز / الثانية
           </p>
-          <button class="btn"><a href="#"> اضافه للسلة</a></button>
+          <div> <button class="btn"><a href="{{url_for('payment')}}">شراء</a></button></div>
         </div>
         <div class="hero-image">
           <img src="{{url_for('static', filename='image/fan sharp.jpg')}}" width="450" alt="FAN SHARP" />

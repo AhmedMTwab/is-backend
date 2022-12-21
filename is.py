@@ -81,14 +81,9 @@ fans = [
     },
 ]
 
-
 @app.route("/")
 def home():
     return render_template('intro.html',custom_css="intro",title="تسوق اسهل")
-
-@app.route("/AddCart")
-def AddCart():
-    return render_template('AddCart.html',custom_css="AddCart",title="تسوق اسهل",cart=cart)
 
 @app.route("/categories")
 def categories():
@@ -100,7 +95,7 @@ def air_conditioner_devices():
 
 @app.route("/air-conditioner-LG")
 def air_conditioner_LG():
-    return render_template('air-conditioner-LG.html',custom_css="air-conditioner-LG",title="تسوق اسهل",cart=cart)
+    return render_template('air-conditioner-LG.html',custom_css="air-conditioner-LG",title="تسوق اسهل")
 
 @app.route("/air-conditioner-samsung")
 def air_conditioner_samsung():
@@ -174,9 +169,9 @@ def washing_machine_samsung():
 def washing_machine_sharp():
     return render_template('washing_machine_sharp.html',custom_css="washing_machine_sharp",title="تسوق اسهل")                   
 
-@app.route("/all-devices")
-def alldevices ():
-    return render_template('All-devices.html',custom_css="All-devices",title="تسوق اسهل")       
+@app.route("/payment", methods=["GET", "POST"])
+def payment ():
+    return render_template('payment.html',custom_css="payment",title="تسوق اسهل")       
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
