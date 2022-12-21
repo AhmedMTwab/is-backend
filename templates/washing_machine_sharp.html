@@ -1,0 +1,72 @@
+{%extends "layout.html"%}
+{% block content%}
+   <!-- NAVBAR -->
+   <nav>
+    <div class="logo">
+        <img src="{{url_for('static', filename='image/electronics.png')}}" width="30" alt="اجهزة حديثه"/>
+      <h4>تسوق اسهل </h4>
+    </div>
+    <ul class="nav-items">
+      <li class="nav-item">
+        <a href="{{url_for('categories')}}" class="nav-link">الفئات</a>
+      </li>
+      <li class="nav-item">
+        <a href="basket.html" class="nav-link"> السلة </a>
+      </li>
+      <li class="nav-item">
+        <a href="{{url_for('home')}}" class="nav-link"> تسجيل خروج</a>
+      </li>
+    </ul>
+  </nav>
+
+  
+
+
+   <!--Tv-section-->
+
+   <section class="hero">
+      <div class="hero-section">
+        <div class="content">
+          <h4> washing-machine SHARP </h4>
+          <h1>
+السعر : 7349
+        </h1>
+        <h3>  الموديل : ES-TN09GDSP </h3>
+          <p>
+            سعة الغسالة : 9 كجم ,
+            معدل الدوران : 700 لفة في الدقيقة ,
+            لوحة تحكم ديجيتال تعمل باللمس ,
+            لون جسم الغسالة : سيلفر غامق ,
+            لون الجزء العلوي من الغسالة : أسود ,
+            باب زجاجي هيدروليك ,
+            مزودة بمدخلين للمياه ( بارد / ساخن ) ,
+            مزودة بطلمبة لصرف المياه ,
+            الطلمبة مزوده بفلتر للحفاظ عليها من الشوائب ,
+            مزودة بفلتر لأنتزاع الشوائب بتصميم جديد و عمر أطول ,
+            مروحة مضادة للبكتيريا و الجراثيم ,
+            مصنوعة من مواد عالية الجودة و مقاومة للصدأ , 
+            تحكم كامل لوظائف التشغيل بواسطة نظام كمبيوتر ذكي ,
+            إمكانية التحكم في خاصية النقع ( حتى 180 دقيقة ) من خلال مفتاح النقع 
+            إمكانية تحديد مستوى المياه بالغسالة أوتوماتيكياً ليتناسب مع كمية الغسيل 
+          </p>
+          <button class="btn"><a href="#features"> اضافه للسلة</a></button>
+        </div>
+        <div class="hero-image">
+          <img src="{{url_for('static', filename='image/wish sharp.png')}}" width="500" alt="washing-machine SHARP" />
+        </div>
+      </div>
+    </section>
+
+
+   <!-- Footer -->
+   <footer>
+    <div class="footer-section">
+      <p>جميع الحقوق محفوظة لشركة تسوق اسهل 2022</p>
+      <div class="socials">
+        <i class="fab fa-twitter" ></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </footer>
+  {%endblock content%}

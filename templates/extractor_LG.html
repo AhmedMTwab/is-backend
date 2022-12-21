@@ -1,0 +1,67 @@
+{%extends "layout.html"%}
+{% block content%}
+   <!-- NAVBAR -->
+   <nav>
+    <div class="logo">
+        <img src="{{url_for('static', filename='image/electronics.png')}}" width="30" alt="اجهزة حديثه"/>
+      <h4>تسوق اسهل </h4>
+    </div>
+    <ul class="nav-items">
+      <li class="nav-item">
+        <a href="{{url_for('categories')}}" class="nav-link">الفئات</a>
+      </li>
+      <li class="nav-item">
+        <a href="basket.html" class="nav-link"> السلة </a>
+      </li>
+      <li class="nav-item">
+        <a href="{{url_for('home')}}" class="nav-link"> تسجيل خروج</a>
+      </li>
+    </ul>
+  </nav>
+
+
+
+
+   <!--Tv-section-->
+
+   <section class="hero">
+      <div class="hero-section">
+        <div class="content">
+          <h4> FAN LG </h4>
+          <h1>
+السعر : 7299
+        </h1>
+        <h3>  الموديل : FC48GSSA1 </h3>
+          <p>
+            العلامة التجارية	LG ,
+            اللون	فضي ,
+            تصميم مروحة كهربائية	مروحة سقف ,
+            مصدر الطاقة	Corded Electric ,
+            نوع التركيب	Downrod Mount ,
+            نوع أداة التحكم	Remote Control ,
+            أبعاد المنتج	43.2D x 120W x 120H سم ,
+            المادة	أكريلونيتريل بوتادين ستايرين ,
+            القوة / القوة الكهربائية	26.3 واط ,
+            عدد الشفرات	3
+          </p>
+          <button class="btn"><a href="#"> اضافه للسلة</a></button>
+        </div>
+        <div class="hero-image">
+          <img src="{{url_for('static', filename='image/fan LG.jpg')}}" width="550" alt="FAN LG" />
+        </div>
+      </div>
+    </section>
+
+
+   <!-- Footer -->
+   <footer>
+    <div class="footer-section">
+      <p>جميع الحقوق محفوظة لشركة تسوق اسهل 2022</p>
+      <div class="socials">
+        <i class="fab fa-twitter" ></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </footer>
+  {%endblock content%}

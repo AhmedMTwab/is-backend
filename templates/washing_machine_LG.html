@@ -1,0 +1,72 @@
+{%extends "layout.html"%}
+{% block content%}
+   <!-- NAVBAR -->
+   <nav>
+    <div class="logo">
+        <img src="{{url_for('static', filename='image/electronics.png')}}" width="30" alt="اجهزة حديثه"/>
+      <h4>تسوق اسهل </h4>
+    </div>
+    <ul class="nav-items">
+      <li class="nav-item">
+        <a href="{{url_for('categories')}}" class="nav-link">الفئات</a>
+      </li>
+      <li class="nav-item">
+        <a href="basket.html" class="nav-link"> السلة </a>
+      </li>
+      <li class="nav-item">
+        <a href="{{url_for('home')}}" class="nav-link"> تسجيل خروج</a>
+      </li>
+    </ul>
+  </nav>
+
+  
+
+   <!--Tv-section-->
+
+   <section class="hero">
+      <div class="hero-section">
+        <div class="content">
+          <h4> washing-machine LG </h4>
+          <h1>
+السعر : 14390
+        </h1>
+        <h3>  الموديل : F4R5TYG2T </h3>
+          <p>
+            الماركة: ال جي ,
+            النوع: غسالة اتوماتيك تحميل أمامي ,
+            السعة: 8 كيلو غرام ,
+            اللون: فضي ,
+            العرض الرقمي: نعم ,
+            نوع التحميل: تحميل علوي ,
+            نوع الغسالة: أوتوماتيك ,
+            مادة الأنبوب: ستانلس ستيل ,
+            وظيفة البخار: نعم ,
+            نظام التركيب: ثابت ,
+            تقنية AI DD (محرك دفع بتقنية الذكاء الاصطناعي) ,
+            ThinQ تقنية ,
+            موفرة للطاقة حتى 28% ,
+            خاصية البخار لتقليل ما يصل إلى 99.9٪ من المواد المسببة للحساسية ,
+            سعة تحميل أكبر ,
+            باب الغسالة من الزجاج المقوى
+          </p>
+          <button class="btn"><a href="#features"> اضافه للسلة</a></button>
+        </div>
+        <div class="hero-image">
+          <img src="{{url_for('static', filename='image/wish Lg.jpg')}}" width="350" alt=" washing-machine LG " />
+        </div>
+      </div>
+    </section>
+
+
+   <!-- Footer -->
+   <footer>
+    <div class="footer-section">
+      <p>جميع الحقوق محفوظة لشركة تسوق اسهل 2022</p>
+      <div class="socials">
+        <i class="fab fa-twitter" ></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </footer>
+  {%endblock content%}

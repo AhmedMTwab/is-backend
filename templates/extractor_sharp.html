@@ -1,0 +1,68 @@
+{%extends "layout.html"%}
+{% block content%}
+   <!-- NAVBAR -->
+   <nav>
+    <div class="logo">
+        <img src="{{url_for('static', filename='image/electronics.png')}}" width="30" alt="اجهزة حديثه"/>
+      <h4>تسوق اسهل </h4>
+    </div>
+    <ul class="nav-items">
+      <li class="nav-item">
+        <a href="{{url_for('categories')}}" class="nav-link">الفئات</a>
+      </li>
+      <li class="nav-item">
+        <a href="basket.html" class="nav-link"> السلة </a>
+      </li>
+      <li class="nav-item">
+        <a href="{{url_for('home')}}" class="nav-link"> تسجيل خروج</a>
+      </li>
+    </ul>
+  </nav>
+
+
+   <!--Tv-section-->
+
+   <section class="hero">
+      <div class="hero-section">
+        <div class="content">
+          <h4> FAN SHARP </h4>
+          <h1>
+السعر : 5249
+        </h1>
+        <h3>  الموديل : SHTCFM60 </h3>
+          <p>
+            مقاس المروحة : 25 بوصة
+            لون المروحة : اسود
+            عدد الريش : 3 ريشة معدن
+            عدد السرعات : 3 سرعات اختيارية لاندفاع هواء المروحة
+            سرعة المروحة : 180 لفة / دقيقة
+            مزودة بموتور نحاس 50 وات
+            معدل تدفق الهواء : 140 متر مكعب / دقيقة
+            مفتاح موفر للطاقة لأداء أفضل
+            سلك أمان
+            تعمل بهدوء أثناء التشغيل
+            موتور قوي
+            تعمل 5000 ساعة تشغيل متواصلة
+            جهد التشغيل : 220 فولت - 50 هرتز / الثانية
+          </p>
+          <button class="btn"><a href="#"> اضافه للسلة</a></button>
+        </div>
+        <div class="hero-image">
+          <img src="{{url_for('static', filename='image/fan sharp.jpg')}}" width="450" alt="FAN SHARP" />
+        </div>
+      </div>
+    </section>
+
+
+   <!-- Footer -->
+   <footer>
+    <div class="footer-section">
+      <p>جميع الحقوق محفوظة لشركة تسوق اسهل 2022</p>
+      <div class="socials">
+        <i class="fab fa-twitter" ></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </footer>
+  {%endblock content%}

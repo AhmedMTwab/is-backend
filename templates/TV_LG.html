@@ -1,0 +1,63 @@
+{%extends "layout.html"%}
+{% block content%}
+   <!-- NAVBAR -->
+   <nav>
+    <div class="logo">
+        <img src="{{url_for('static', filename='image/electronics.png')}}" width="30" alt="اجهزة حديثه"/>
+      <h4>تسوق اسهل </h4>
+    </div>
+    <ul class="nav-items">
+      <li class="nav-item">
+        <a href="{{url_for('categories')}}" class="nav-link">الفئات</a>
+      </li>
+      <li class="nav-item">
+        <a href="basket.html" class="nav-link"> السلة </a>
+      </li>
+      <li class="nav-item">
+        <a href="{{url_for('home')}}" class="nav-link"> تسجيل خروج</a>
+      </li>
+    </ul>
+  </nav>
+
+
+   <!--Tv-section-->
+
+   <section class="hero">
+      <div class="hero-section">
+        <div class="content">
+          <h4> Tv LG </h4>
+          <h1>
+السعر : 8,499
+        </h1>
+        <h3>  الموديل : UQ75006LG </h3>
+          <p>
+            حجم الشاشة	50 بوصة  , 
+            العلامة التجارية	LG  ,
+            تكنولوجيا العرض	LED  ,
+            الدقة	4K UHD ,
+            تقنية الاتصال	واي فاي  ,
+            اللون	أسود  ,
+            أبعاد المنتج	19.3D x 96.4W x 62.8H سم  ,
+            أنظمة التشغيل	سمارت ,
+          </p>
+          <button class="btn"><a href="#features"> اضافه للسلة</a></button>
+        </div>
+        <div class="hero-image">
+          <img src="{{url_for('static', filename='image/Tv LG.jpg')}}" alt=" Tv LG " />
+        </div>
+      </div>
+    </section>
+
+
+   <!-- Footer -->
+   <footer>
+    <div class="footer-section">
+      <p>جميع الحقوق محفوظة لشركة تسوق اسهل 2022</p>
+      <div class="socials">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </footer>
+  {%endblock content%}

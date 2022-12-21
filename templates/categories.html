@@ -1,0 +1,69 @@
+{%extends "layout.html"%}
+{% block content%}
+   <!-- NAVBAR -->
+   <nav>
+    <div class="logo">
+        <img src="{{url_for('static', filename='image/electronics.png')}}" width="30" alt="اجهزة حديثه"/>
+      <h4>تسوق اسهل </h4>
+    </div>
+    <ul class="nav-items">
+      <li class="nav-item">
+        <a href="{{url_for('alldevices')}}" class="nav-link">كل الاجهزة </a>
+      </li>
+      <li class="nav-item">
+        <a href="basket.html" class="nav-link"> السلة </a>
+      </li>
+      <li class="nav-item">
+        <a href="{{url_for('home')}}" class="nav-link"> تسجيل خروج</a>
+      </li>
+    </ul>
+  </nav>
+
+
+   <!--categories-->
+   <section class="o-brands" id="cate">
+    <div class="o-brands-section">
+      <h4>categories</h4>
+      <div class="Brands">
+        <div class="Brands">
+          <a href="{{url_for('tv_devices')}}">
+          <img src="{{url_for('static', filename='image/TV.png')}}" width="250" />
+        </a>
+        </div>
+        <div class="Brands">
+          <a href="{{url_for('washing_machine_devices')}}">
+          <img src="{{url_for('static', filename='image/washing-machine.png')}}" width="250" />
+        </a>
+        </div>
+        <div class="Brands">
+          <a href="{{url_for('fridge_devices')}}">
+          <img src="{{url_for('static', filename='image/fridge.png')}}" width="250" />
+          </a>
+        </div>
+        <div class="Brands">
+          <a href="{{url_for('air_conditioner_devices')}}">
+          <img src="{{url_for('static', filename='image/air-conditioner.png')}}" width="250" />
+          </a>
+        </div>
+        <div class="Brands">
+          <a href="{{url_for('extractor_devices')}}">
+          <img src="{{url_for('static', filename='image/extractor.png')}}" width="250" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+   <!-- Footer -->
+   <footer>
+    <div class="footer-section">
+      <p>جميع الحقوق محفوظة لشركة تسوق اسهل 2022</p>
+      <div class="socials">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </footer>
+  {% endblock content %}

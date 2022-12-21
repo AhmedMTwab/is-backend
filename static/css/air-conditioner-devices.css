@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Tajawal", sans-serif;
+}
+
+
+
+
+/* Navbar styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 5rem;
+}
+
+nav .logo {
+  display: flex;
+  font-size: 2rem;
+  align-items: center;
+}
+
+nav .logo i {
+  color: #6e0aef;
+  padding-left: 0.75rem;
+}
+nav .bars-menu {
+  display: none;
+}
+nav .logo h4 {
+  font-family: "Lalezar", cursive;
+}
+
+nav .nav-items {
+  display: flex;
+  list-style-type: none;
+}
+
+nav .nav-items .nav-item {
+  padding: 0 1rem;
+}
+
+nav .nav-link {
+  text-decoration: none;
+  color: #4e547e;
+  font-size: 1.4rem;
+}
+
+nav .nav-link:hover {
+  color: #6e0aef;
+}
+
+
+
+
+/* brands section */
+.o-brands {
+    padding-top: 5rem;
+  }
+  
+  .o-brands .o-brands-section {
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .o-brands-section h4 {
+    color: #9f6de1;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  
+  .o-brands-section .Brands {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: flex-start;
+  }
+  
+  .Brands .Brands {
+    margin: 2rem 0;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .Brands img {
+    margin-bottom: 1rem;
+  }
+  
+  .Brands img:hover {
+    scale: 1.1;
+    cursor: pointer;
+  }
+  .Brands h3 {
+    font-size: 1.6rem;
+  }
+  
+
+
+
+  
+/* Footer */
+footer {
+    background-color: aliceblue;
+    height: 15vh;
+    margin-top: 5rem;
+    padding: 2rem 0;
+  }
+  
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 5rem;
+  }
+  
+  .footer-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-section .socials {
+    margin-bottom: 1rem;
+  }
+  .footer-section .socials i {
+    padding: 0 0.5rem;
+    font-size: 1.6rem;
+  }
+  
+  .footer-section .socials i:hover {
+    color: #900aef;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+  
+  /* Responsive Design */
+  @media (max-width: 1300px) {
+    * {
+      font-size: 85%;
+    }
+  }
+  
+  @media (max-width: 1175px) {
+    * {
+      font-size: 80%;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    * {
+      text-align: center;
+    }
+    .hero-section {
+      align-items: center;
+      padding: 2rem 0rem;
+      width: 50%;
+    }
+    .hero .btn {
+      align-self: center;
+    }
+    .hero .content {
+      margin-top: 2rem;
+    }
+    .features-section .qualities {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    section.features .features-section {
+      align-items: center;
+    }
+    .categories-section h4 {
+      align-self: center;
+    }
+  }
+  
+  @media (max-width: 660px) {
+    .categories-section .content h1 {
+      font-size: 2rem;
+    }
+    .categories-section {
+      align-items: center;
+    }
+    .categories-section .Brands {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 504px) {
+    .categories-section .Brands {
+      grid-template-columns: 1fr;
+    }
+  }
+  
