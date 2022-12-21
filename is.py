@@ -1,10 +1,13 @@
 from flask import Flask, render_template, url_for, flash, redirect
+from flask_sqlalchemy import SQLAlchemy 
 from forms import RegistrationForm, LoginForm
 
 app =Flask(__name__)
 app.config[
     "SECRET_KEY"
 ] = "62913a7dac3933f87a84626fcdeaaf9e2653f0a000843efd9bf2b31ba4767402"
+app.config ['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///is.db'
+db = SQLAlchemy(app)
 
 tv = [
     {
@@ -171,7 +174,13 @@ def washing_machine_sharp():
 
 @app.route("/payment", methods=["GET", "POST"])
 def payment ():
-    return render_template('payment.html',custom_css="payment",title="تسوق اسهل")       
+    return render_template('payment.html',custom_css="payment",title="تسوق اسهل")
+
+@app.route("/thanks")
+def thanks():
+    return render_template('thanks.html',custom_css="thanks", title="تسوق اسهل")
+
+       
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -195,6 +204,51 @@ def login():
         else:
             flash("Login Unsuccessful. Please check credentials", "danger")
     return render_template("login.html", title="Login", form=form)
+
+class Device(db.Model):
+    D_id = db.Column(db.Integer, primary_key=True)
+    D_name = db.Column(db.String(25), nullable=False) 
+    D_photo = db.Column(db.String(20), nullable=False, default='default.jpg') 
+    D_model = db.Column(db.String(25), nullable=False)
+    D_details = db.Column(db.String(150), nullable=False)
+    D_price = db.Column(db.Float(25), nullable=False)
+    brand_id= db.Column(db.Integer, db.ForeignKey('brand.brand_id'), nullable=False)
+    sec_id= db.Column(db.Integer, db.ForeignKey('section.sec_id'), nullable=False)
+    customer_email= db.Column(db.Integer, db.ForeignKey('customer.customer_email'), nullable=False)   
+    
+def __repr__(self):
+    return f"Device('{self.D_name}','{self.D_photo}','{self.D_price})"
+
+class Section(db.Model):
+    sec_id = db.Column(db.Integer, primary_key=True) 
+    sec_name = db.Column(db.String(25), nullable=False) 
+    sec_photo = db.Column(db.String(20), nullable=False, default='default.jpg')
+    d_sec= db.relationship('device',backref='device_section', lazy=True)
+
+def __repr__(self):
+    return f"Section('{self.sec_name}','{self.sec_photo}')"
+
+class Brand(db.Model):
+    brand_id = db.Column(db.Integer, primary_key=True)
+    brand_name = db.Column(db.String(25), nullable=False)
+    logo = db.Column(db.String(20), nullable=False, default='default.jpg')
+    device = db.relationship('device',backref='device_brand', lazy=True)
+
+def __repr__(self):
+    return f"Brand('{self.brand_name}','{self.brand_logo}')"
+
+class Customer(db.Model):
+    customer_email = db.Column(db.String(125), primary_key=True,nullable=False)
+    fname = db.Column(db.String(25), nullable=False)
+    lname = db.Column(db.String(25), nullable=False)
+    username= db.Column(db.String(25),unique=True, nullable=False)
+    customer_phone= db.Column(db.VARCHAR(20),nullable=False) 
+    customer_pass = db.Column(db.String(60), nullable=False)
+    sec_photo = db.Column(db.String(20), nullable=False, default='default.jpg')
+    custom_device= db.relationship('device',backref='customer.devices', lazy=True)
+   
+def __repr__(self):
+    return f"Customer('{self.customer_name}','{self.customer_phone}','{self.custom_device})"
 
 
 if __name__ == "__main__":
